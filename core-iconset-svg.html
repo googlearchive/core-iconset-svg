@@ -62,7 +62,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   Polymer({
     is: 'core-iconset-svg',
 
-    published: {
+    properties: {
       /**
        * The name of the iconset.
        *
@@ -105,7 +105,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     },
 
     get iconNames () {
-      return this.lightDom.querySelectorAll('[id]')
+      return Polymer.dom.querySelectorAll('[id]', this)
         .map(function (icon) {
           return icon.id;
         });
@@ -113,7 +113,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     iconById: function (id) {
       if (!this.icons[id]) {
-        this.icons[id] = this.lightDom.querySelector('[id="' + id + '"]');
+        this.icons[id] = Polymer.dom.querySelector('[id="' + id + '"]', this)
       }
 
       return this.icons[id];
