@@ -1,4 +1,4 @@
 core-iconset-svg
 =========
 
-See the [component page](http://polymer-project.org/docs/elements/core-elements.html#core-iconset-svg) for more information.
+See the [component page](https://www.polymer-project.org/0.5/docs/elements/core-iconset-svg.html) for more information.
